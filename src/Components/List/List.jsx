@@ -27,8 +27,8 @@ const List = ({inputs}) => {
                         <td>{date.datetime}</td>
                         <td>{date.min_temp + "°F"}</td>
                         <td>{date.max_temp + "°F"}</td>
-                        <td>{date.wind_spd + " m/s"}</td>
-                        <td>{date.clouds + "%"}</td>
+                        <td>{date.wind_spd + " m/s" + "🌬️"}</td>
+                        <td>{date.clouds + "%" + "☁️"}</td>
                     </tr>
                 ) 
                 }

@@ -8,7 +8,7 @@ const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
 
 function App() {
-  const [currWeather, setCurrWeather] = useState({})
+  const [currentWeather, setCurrentWeather] = useState({})
   const  [inputs, setInputs] = useState({
     startDate: "2023-03-19",
     endDate: "2023-03-25",
@@ -16,13 +16,13 @@ function App() {
   }); 
 
   useEffect(() => {
-    const getCurrWeather = async () => {
+    const getCurrentWeather = async () => {
       const response = await fetch(`https://api.weatherbit.io/v2.0/current?&city=OKC&country=US&units=I&key=${API_KEY}`)
       const json = await response.json()
-      setCurrWeather(json.data[0]);
+      setCurrentWeather(json.data[0]);
       
     }
-    getCurrWeather().catch(console.error);
+    getCurrentWeather().catch(console.error);
   },[])
 
   const handleChange = (event) => {
@@ -47,16 +47,16 @@ function App() {
       <div className='main'>
         <div className='feature-cards'>
           <Card 
-            descr={currWeather.city_name}
-            title={"🕢" + currWeather.ob_time}
+            descr={currentWeather.city_name}
+            title={"🕢" + currentWeather.ob_time}
           />
           <Card 
-            descr={"🌡️" + currWeather.temp + "°F"}
-            title={"💨" + currWeather.wind_spd + " m/s"}
+            descr={"🌡️" + currentWeather.temp + "°F"}
+            title={"💨" + currentWeather.wind_spd + " m/s"}
           />
           <Card 
-            descr={"🌧️" + currWeather.precip + " mm/hr"}
-            title={"🌡️💧 " + currWeather.dewpt  + "°F"}
+            descr={"🌧️" + currentWeather.precip + " mm/hr"}
+            title={"🌡️💧 " + currentWeather.dewpt  + "°F"}
           />
         </div>
 
@@ -80,7 +80,7 @@ function App() {
             {/* </label>   */}
             <label className='attr-label'>
               Wind Speed 💨: </label>
-              <input
+              <input className='range'
                 type="range"
                 min="0" 
                 max="100"
