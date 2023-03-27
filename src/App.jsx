@@ -80,7 +80,7 @@ function App() {
             {/* </label>   */}
             <label className='attr-label'>
               Wind Speed 💨: </label>
-              <input
+              <input className='prog-bar'
                 type="range"
                 min="0" 
                 max="100"
