@@ -1,8 +1,8 @@
-import "./HighLowGraph.css";
+import "./MinMaxTempGraph.css";
 import React from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Label } from "recharts";
 
-const HighLowGraph = ({pastWeather}) => {
+const MinMaxTempGraph = ({pastWeather}) => {
     return (
         <div>
             <LineChart 
@@ -31,4 +31,4 @@ const HighLowGraph = ({pastWeather}) => {
     )
 };
 
-export default HighLowGraph;
+export default MinMaxTempGraph;

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
-import Header from './Components/Header/Header';
 import Card from './Components/Card/Card';
 import './App.css'
 import List from './Components/List/List';
-import HighLowGraph from './Components/HighLowGraph/HighLowGraph';
+import MinMaxTempGraph from './Components/MinMaxTempGraph/MinMaxTempGraph';
 import CloudGraph from './Components/CloudGraph/CloudGraph';
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -36,10 +35,6 @@ function App() {
     }))
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setRenderInputData(true);
-  }
 
   return (
     <div className="App">
@@ -111,7 +106,7 @@ function App() {
 
         <div className='graph'>
             <h2> Max & Min Temperatures </h2>
-            <HighLowGraph 
+            <MinMaxTempGraph 
             pastWeather={pastWeather}/>
 
             <h2>Cloud Coverage</h2>
