@@ -5,10 +5,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 const CloudGraph = ({pastWeather}) => {
     return (
         <div>
-            <BarChart
-                width={800}
-                height={300}
-                data={pastWeather}
+            <BarChart width={800} height={300} data={pastWeather} 
                 margin={{
                     top: 5,
                     right: 30,

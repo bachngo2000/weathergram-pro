@@ -5,16 +5,14 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Label } from "re
 const MinMaxTempGraph = ({pastWeather}) => {
     return (
         <div>
-            <LineChart 
-                width={800}
-                height={300}
-                data={pastWeather}
+            <LineChart width={800} height={300} data={pastWeather}
                 margin={{
                     top: 5,
                     right: 30,
                     left: 20,
                     bottom: 5,
-                }}>
+                }}
+            >
 
                 <Line type="monotone" dataKey="max_temp" stroke="blue" />
 
