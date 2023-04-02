@@ -2,7 +2,8 @@
 
 Submitted by: Bach Nguyen-Ngo
 
-This web app: **insert description**
+This web app: serves as a data dashboard that provides an at-a-glance summary of weather information for the city of Oklahoma City gathered from the Weatherbit API.
+It also has data visualizations in the dashboard view and detail view containing more info related to several weather attributes.
 
 Time spent: 6 hours spent in total
 
